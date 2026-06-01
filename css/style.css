@@ -385,6 +385,274 @@ body {
     border-color: #ff6b35;
 }
 
+/* Preloader */
+.preloader {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: white;
+    z-index: 9999;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.loader {
+    width: 50px;
+    height: 50px;
+    border: 5px solid #f3f3f3;
+    border-top: 5px solid #ff6b35;
+    border-radius: 50%;
+    animation: spin 1s linear infinite;
+}
+
+@keyframes spin {
+    0% { transform: rotate(0deg); }
+    100% { transform: rotate(360deg); }
+}
+
+/* Floating WhatsApp */
+.whatsapp-float {
+    position: fixed;
+    bottom: 80px;
+    right: 20px;
+    background: #25D366;
+    color: white;
+    width: 55px;
+    height: 55px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 28px;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.2);
+    z-index: 1000;
+    transition: all 0.3s;
+}
+
+.whatsapp-float:hover {
+    transform: scale(1.1);
+    color: white;
+}
+
+/* Back to Top */
+.back-to-top {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    background: #1a3a6f;
+    color: white;
+    width: 45px;
+    height: 45px;
+    border-radius: 50%;
+    border: none;
+    cursor: pointer;
+    display: none;
+    align-items: center;
+    justify-content: center;
+    z-index: 1000;
+    transition: all 0.3s;
+}
+
+.back-to-top:hover {
+    background: #ff6b35;
+}
+
+/* Portfolio */
+.portfolio {
+    padding: 80px 0;
+    background: #f8f9fa;
+}
+
+.portfolio-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 25px;
+}
+
+.portfolio-item {
+    position: relative;
+    border-radius: 10px;
+    overflow: hidden;
+    cursor: pointer;
+    background: #1a3a6f;
+    height: 250px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.portfolio-image i {
+    font-size: 60px;
+    color: rgba(255,255,255,0.3);
+}
+
+.portfolio-overlay {
+    position: absolute;
+    bottom: -100%;
+    left: 0;
+    width: 100%;
+    background: linear-gradient(to top, #1a3a6f, transparent);
+    color: white;
+    padding: 20px;
+    transition: bottom 0.3s;
+}
+
+.portfolio-item:hover .portfolio-overlay {
+    bottom: 0;
+}
+
+/* Team Section */
+.team {
+    padding: 80px 0;
+    background: white;
+}
+
+.team-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+    gap: 30px;
+}
+
+.team-card {
+    text-align: center;
+    padding: 30px 20px;
+    background: #f8f9fa;
+    border-radius: 15px;
+    transition: transform 0.3s;
+}
+
+.team-card:hover {
+    transform: translateY(-10px);
+}
+
+.team-photo i {
+    font-size: 60px;
+    color: #ff6b35;
+    margin-bottom: 15px;
+}
+
+.team-card h3 {
+    font-size: 18px;
+    color: #1a3a6f;
+    margin-bottom: 5px;
+}
+
+.position {
+    color: #ff6b35;
+    font-weight: 600;
+    margin-bottom: 10px;
+}
+
+/* Testimonials */
+.testimonials {
+    padding: 80px 0;
+    background: linear-gradient(135deg, #1a3a6f, #0e1e3a);
+    color: white;
+}
+
+.testimonial-slider {
+    position: relative;
+    max-width: 800px;
+    margin: 0 auto;
+    min-height: 250px;
+}
+
+.testimonial-card {
+    display: none;
+    text-align: center;
+    padding: 40px;
+    background: rgba(255,255,255,0.1);
+    border-radius: 20px;
+    backdrop-filter: blur(10px);
+}
+
+.testimonial-card.active {
+    display: block;
+    animation: fadeIn 0.5s;
+}
+
+@keyframes fadeIn {
+    from { opacity: 0; transform: translateY(20px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+
+.testimonial-card i {
+    font-size: 40px;
+    color: #ff6b35;
+    margin-bottom: 20px;
+}
+
+.testimonial-card p {
+    font-size: 18px;
+    margin-bottom: 20px;
+}
+
+.testimonial-card h4 {
+    font-size: 16px;
+    color: #ff6b35;
+}
+
+.slider-controls {
+    text-align: center;
+    margin-top: 30px;
+}
+
+.prev-slide, .next-slide {
+    background: white;
+    border: none;
+    padding: 10px 15px;
+    margin: 0 10px;
+    border-radius: 50%;
+    cursor: pointer;
+    transition: all 0.3s;
+}
+
+.prev-slide:hover, .next-slide:hover {
+    background: #ff6b35;
+    color: white;
+}
+
+/* Dark Mode (Optional) */
+body.dark-mode {
+    background: #1a1a2e;
+    color: #eee;
+}
+
+body.dark-mode .navbar,
+body.dark-mode .value-card,
+body.dark-mode .service-card,
+body.dark-mode .team-card {
+    background: #16213e;
+    color: #eee;
+}
+
+body.dark-mode .nav-brand h2,
+body.dark-mode .value-card h3,
+body.dark-mode .service-card h3,
+body.dark-mode .team-card h3 {
+    color: #ff6b35;
+}
+
+.dark-mode-toggle {
+    position: fixed;
+    bottom: 20px;
+    left: 20px;
+    background: #1a3a6f;
+    color: white;
+    width: 45px;
+    height: 45px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    z-index: 1000;
+    border: none;
+}
+
 /* Footer */
 .footer {
     background: #0e1e3a;
