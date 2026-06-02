@@ -575,6 +575,229 @@
                 grid-template-columns: 1fr;
             }
         }
+
+        /* Software Solutions Section */
+        .software-solutions {
+            padding: 80px 0;
+            background: linear-gradient(135deg, #f8f9fa 0%, #ffffff 100%);
+        }
+        
+        .solutions-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+            gap: 30px;
+            margin-top: 40px;
+        }
+        
+        .solution-card {
+            background: white;
+            border-radius: 20px;
+            padding: 30px;
+            position: relative;
+            transition: all 0.3s ease;
+            box-shadow: 0 5px 20px rgba(0,0,0,0.05);
+            border: 1px solid rgba(0,0,0,0.05);
+        }
+        
+        .solution-card:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 20px 40px rgba(0,0,0,0.1);
+            border-color: #ff6b35;
+        }
+        
+        .solution-icon {
+            width: 70px;
+            height: 70px;
+            background: linear-gradient(135deg, #1a3a6f, #ff6b35);
+            border-radius: 15px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin-bottom: 20px;
+        }
+        
+        .solution-icon i {
+            font-size: 32px;
+            color: white;
+        }
+        
+        .solution-badge {
+            position: absolute;
+            top: 20px;
+            right: 20px;
+            background: #ff6b35;
+            color: white;
+            padding: 4px 12px;
+            border-radius: 20px;
+            font-size: 11px;
+            font-weight: 600;
+        }
+        
+        .solution-card h3 {
+            font-size: 22px;
+            color: #1a3a6f;
+            margin-bottom: 15px;
+        }
+        
+        .solution-card p {
+            color: #666;
+            margin-bottom: 20px;
+            line-height: 1.6;
+        }
+        
+        .solution-features {
+            list-style: none;
+            margin-bottom: 20px;
+        }
+        
+        .solution-features li {
+            margin-bottom: 8px;
+            font-size: 14px;
+            color: #555;
+            display: flex;
+            align-items: center;
+            gap: 8px;
+        }
+        
+        .solution-features li i {
+            color: #ff6b35;
+            font-size: 14px;
+        }
+        
+        .tech-stack {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 8px;
+            margin-top: 15px;
+            padding-top: 15px;
+            border-top: 1px solid #eee;
+        }
+        
+        .tech-tag {
+            background: #f0f0f0;
+            padding: 4px 10px;
+            border-radius: 15px;
+            font-size: 11px;
+            font-weight: 500;
+            color: #1a3a6f;
+        }
+        
+        /* Portfolio Showcase */
+        .portfolio-showcase {
+            margin-top: 60px;
+            text-align: center;
+        }
+        
+        .portfolio-showcase h3 {
+            font-size: 28px;
+            color: #1a3a6f;
+            margin-bottom: 30px;
+        }
+        
+        .portfolio-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 25px;
+        }
+        
+        .portfolio-item {
+            background: white;
+            padding: 25px;
+            border-radius: 15px;
+            text-align: center;
+            transition: all 0.3s;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.05);
+        }
+        
+        .portfolio-item:hover {
+            transform: translateY(-5px);
+            background: #1a3a6f;
+            color: white;
+        }
+        
+        .portfolio-item:hover .portfolio-icon i {
+            color: white;
+        }
+        
+        .portfolio-item:hover h4,
+        .portfolio-item:hover p {
+            color: white;
+        }
+        
+        .portfolio-icon {
+            margin-bottom: 15px;
+        }
+        
+        .portfolio-icon i {
+            font-size: 40px;
+            color: #ff6b35;
+            transition: color 0.3s;
+        }
+        
+        .portfolio-item h4 {
+            font-size: 18px;
+            margin-bottom: 10px;
+            color: #1a3a6f;
+        }
+        
+        .portfolio-item p {
+            font-size: 13px;
+            color: #666;
+        }
+        
+        /* Software CTA */
+        .software-cta {
+            margin-top: 60px;
+            background: linear-gradient(135deg, #1a3a6f 0%, #0e1e3a 100%);
+            border-radius: 20px;
+            overflow: hidden;
+        }
+        
+        .cta-content {
+            padding: 50px;
+            text-align: center;
+            color: white;
+        }
+        
+        .cta-content i {
+            font-size: 50px;
+            margin-bottom: 20px;
+            color: #ff6b35;
+        }
+        
+        .cta-content h3 {
+            font-size: 28px;
+            margin-bottom: 15px;
+        }
+        
+        .cta-content p {
+            font-size: 16px;
+            margin-bottom: 25px;
+            opacity: 0.9;
+        }
+        
+        /* Responsive */
+        @media (max-width: 768px) {
+            .solutions-grid {
+                grid-template-columns: 1fr;
+            }
+            
+            .portfolio-grid {
+                grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+            }
+            
+            .cta-content {
+                padding: 30px 20px;
+            }
+            
+            .cta-content h3 {
+                font-size: 22px;
+            }
+            
+            .solution-card {
+                padding: 20px;
+            }
+        }
     </style>
 </head>
 <body>
@@ -596,6 +819,7 @@
                 <a href="#profile">Profil</a>
                 <a href="#main-projects">Proyek Utama</a>
                 <a href="#other-projects">Proyek Lainnya</a>
+                <a href="#software-solutions">Software</a>
                 <a href="#contact">Kontak</a>
             </div>
             <div class="menu-toggle">
@@ -756,6 +980,197 @@
         </div>
     </section>
 
+    <!-- SOFTWARE & TECHNOLOGY SOLUTIONS -->
+    <section id="software-solutions" class="software-solutions">
+        <div class="container">
+            <div class="section-title">
+                <h2>Software & Technology Solutions</h2>
+                <div class="title-line"></div>
+                <p class="section-subtitle">Solusi digital inovatif untuk transformasi bisnis Anda</p>
+            </div>
+            
+            <div class="solutions-grid">
+                <!-- Website Development -->
+                <div class="solution-card">
+                    <div class="solution-icon">
+                        <i class="fas fa-globe"></i>
+                    </div>
+                    <div class="solution-badge">Popular</div>
+                    <h3>Website Development</h3>
+                    <p>Pembuatan website profesional dengan teknologi modern untuk bisnis Anda.</p>
+                    <ul class="solution-features">
+                        <li><i class="fas fa-check-circle"></i> Company Profile</li>
+                        <li><i class="fas fa-check-circle"></i> E-Commerce & Marketplace</li>
+                        <li><i class="fas fa-check-circle"></i> Landing Page Marketing</li>
+                        <li><i class="fas fa-check-circle"></i> Progressive Web App (PWA)</li>
+                        <li><i class="fas fa-check-circle"></i> Content Management System</li>
+                    </ul>
+                    <div class="tech-stack">
+                        <span class="tech-tag">Laravel</span>
+                        <span class="tech-tag">React JS</span>
+                        <span class="tech-tag">Vue JS</span>
+                        <span class="tech-tag">Node JS</span>
+                        <span class="tech-tag">Tailwind CSS</span>
+                    </div>
+                </div>
+    
+                <!-- Desktop Application -->
+                <div class="solution-card">
+                    <div class="solution-icon">
+                        <i class="fas fa-desktop"></i>
+                    </div>
+                    <h3>Desktop Application</h3>
+                    <p>Aplikasi desktop powerful untuk operasional bisnis yang efisien.</p>
+                    <ul class="solution-features">
+                        <li><i class="fas fa-check-circle"></i> Sistem Informasi Manajemen</li>
+                        <li><i class="fas fa-check-circle"></i> Point of Sale (POS)</li>
+                        <li><i class="fas fa-check-circle"></i> Inventory Management</li>
+                        <li><i class="fas fa-check-circle"></i> Accounting Software</li>
+                        <li><i class="fas fa-check-circle"></i> HRIS & Payroll System</li>
+                    </ul>
+                    <div class="tech-stack">
+                        <span class="tech-tag">.NET Core</span>
+                        <span class="tech-tag">Java</span>
+                        <span class="tech-tag">Python</span>
+                        <span class="tech-tag">Electron JS</span>
+                        <span class="tech-tag">SQL Server</span>
+                    </div>
+                </div>
+    
+                <!-- UI/UX Design -->
+                <div class="solution-card">
+                    <div class="solution-icon">
+                        <i class="fas fa-pencil-ruler"></i>
+                    </div>
+                    <div class="solution-badge">Creative</div>
+                    <h3>UI/UX Design</h3>
+                    <p>Desain antarmuka yang menarik dan pengalaman pengguna yang optimal.</p>
+                    <ul class="solution-features">
+                        <li><i class="fas fa-check-circle"></i> User Research & Analysis</li>
+                        <li><i class="fas fa-check-circle"></i> Wireframing & Prototyping</li>
+                        <li><i class="fas fa-check-circle"></i> Mobile App Design</li>
+                        <li><i class="fas fa-check-circle"></i> Dashboard Design</li>
+                        <li><i class="fas fa-check-circle"></i> Design System & Guidelines</li>
+                    </ul>
+                    <div class="tech-stack">
+                        <span class="tech-tag">Figma</span>
+                        <span class="tech-tag">Adobe XD</span>
+                        <span class="tech-tag">Sketch</span>
+                        <span class="tech-tag">InVision</span>
+                        <span class="tech-tag">Photoshop</span>
+                    </div>
+                </div>
+    
+                <!-- Data Science -->
+                <div class="solution-card">
+                    <div class="solution-icon">
+                        <i class="fas fa-chart-line"></i>
+                    </div>
+                    <h3>Data Science & Analytics</h3>
+                    <p>Solusi data-driven untuk pengambilan keputusan bisnis yang cerdas.</p>
+                    <ul class="solution-features">
+                        <li><i class="fas fa-check-circle"></i> Business Intelligence</li>
+                        <li><i class="fas fa-check-circle"></i> Predictive Analytics</li>
+                        <li><i class="fas fa-check-circle"></i> Data Visualization</li>
+                        <li><i class="fas fa-check-circle"></i> Machine Learning</li>
+                        <li><i class="fas fa-check-circle"></i> Big Data Processing</li>
+                    </ul>
+                    <div class="tech-stack">
+                        <span class="tech-tag">Python</span>
+                        <span class="tech-tag">R Language</span>
+                        <span class="tech-tag">TensorFlow</span>
+                        <span class="tech-tag">Tableau</span>
+                        <span class="tech-tag">Power BI</span>
+                    </div>
+                </div>
+    
+                <!-- Mobile Apps -->
+                <div class="solution-card">
+                    <div class="solution-icon">
+                        <i class="fas fa-mobile-alt"></i>
+                    </div>
+                    <div class="solution-badge">Trending</div>
+                    <h3>Mobile Applications</h3>
+                    <p>Aplikasi mobile native dan cross-platform untuk jangkauan lebih luas.</p>
+                    <ul class="solution-features">
+                        <li><i class="fas fa-check-circle"></i> iOS Apps (Swift)</li>
+                        <li><i class="fas fa-check-circle"></i> Android Apps (Kotlin)</li>
+                        <li><i class="fas fa-check-circle"></i> Cross-Platform (Flutter)</li>
+                        <li><i class="fas fa-check-circle"></i> React Native</li>
+                        <li><i class="fas fa-check-circle"></i> Progressive Web App</li>
+                    </ul>
+                    <div class="tech-stack">
+                        <span class="tech-tag">Flutter</span>
+                        <span class="tech-tag">React Native</span>
+                        <span class="tech-tag">Swift</span>
+                        <span class="tech-tag">Kotlin</span>
+                        <span class="tech-tag">Firebase</span>
+                    </div>
+                </div>
+    
+                <!-- Cloud & DevOps -->
+                <div class="solution-card">
+                    <div class="solution-icon">
+                        <i class="fas fa-cloud-upload-alt"></i>
+                    </div>
+                    <h3>Cloud & DevOps</h3>
+                    <p>Infrastruktur cloud modern dan otomatisasi deployment.</p>
+                    <ul class="solution-features">
+                        <li><i class="fas fa-check-circle"></i> Cloud Migration</li>
+                        <li><i class="fas fa-check-circle"></i> CI/CD Pipeline</li>
+                        <li><i class="fas fa-check-circle"></i> Container Orchestration</li>
+                        <li><i class="fas fa-check-circle"></i> Infrastructure as Code</li>
+                        <li><i class="fas fa-check-circle"></i> Cloud Monitoring</li>
+                    </ul>
+                    <div class="tech-stack">
+                        <span class="tech-tag">AWS</span>
+                        <span class="tech-tag">Google Cloud</span>
+                        <span class="tech-tag">Docker</span>
+                        <span class="tech-tag">Kubernetes</span>
+                        <span class="tech-tag">Terraform</span>
+                    </div>
+                </div>
+            </div>
+    
+            <!-- Portfolio/Projects Examples -->
+            <div class="portfolio-showcase">
+                <h3>Proyek Software Kami</h3>
+                <div class="portfolio-grid">
+                    <div class="portfolio-item">
+                        <div class="portfolio-icon"><i class="fas fa-shopping-cart"></i></div>
+                        <h4>E-Commerce Platform</h4>
+                        <p>Platform belanja online dengan fitur lengkap untuk UMKM</p>
+                    </div>
+                    <div class="portfolio-item">
+                        <div class="portfolio-icon"><i class="fas fa-chart-pie"></i></div>
+                        <h4>Dashboard Analytics</h4>
+                        <p>Real-time analytics dashboard untuk monitoring bisnis</p>
+                    </div>
+                    <div class="portfolio-item">
+                        <div class="portfolio-icon"><i class="fas fa-tasks"></i></div>
+                        <h4>Project Management</h4>
+                        <p>Sistem manajemen proyek untuk tim dan kolaborasi</p>
+                    </div>
+                    <div class="portfolio-item">
+                        <div class="portfolio-icon"><i class="fas fa-robot"></i></div>
+                        <h4>AI Chatbot</h4>
+                        <p>Chatbot pintar untuk customer service otomatis</p>
+                    </div>
+                </div>
+            </div>
+    
+            <!-- CTA for Software Solutions -->
+            <div class="software-cta">
+                <div class="cta-content">
+                    <i class="fas fa-rocket"></i>
+                    <h3>Wujudkan Ide Digital Anda Bersama Kami</h3>
+                    <p>Konsultasikan kebutuhan software Anda dengan tim ahli kami</p>
+                    <a href="#contact" class="btn-primary">Konsultasi Gratis →</a>
+                </div>
+            </div>
+        </div>
+    </section>
+    
     <!-- TESTIMONIALS -->
     <section class="testimonials">
         <div class="container">
@@ -800,11 +1215,68 @@
     <footer class="footer">
         <div class="container">
             <div class="footer-content">
-                <div class="footer-logo"><h3>DDSM</h3><p>Dwidaya Semesta Mandiri</p></div>
-                <div class="footer-links"><h4>Tautan Cepat</h4><a href="#home">Beranda</a><a href="#profile">Profil</a><a href="#main-projects">Proyek Utama</a><a href="#other-projects">Proyek Lainnya</a><a href="#contact">Kontak</a></div>
-                <div class="footer-social"><h4>Ikuti Kami</h4><div class="social-icons"><a href="#"><i class="fab fa-linkedin"></i></a><a href="#"><i class="fab fa-instagram"></i></a><a href="#"><i class="fab fa-facebook"></i></a></div></div>
+                <div class="footer-logo">
+                    <h3>DDSM</h3>
+                    <p>Dwidaya Semesta Mandiri</p>
+                    <div class="footer-contact-info" style="margin-top: 15px;">
+                        <p><i class="fas fa-map-marker-alt"></i> Gedung Pembina Graha, Lantai 1 Ruang 9<br>Jl. D.I. Panjaitan No. 45, Rawabunga, Jatinegara<br>Jakarta Timur 13350</p>
+                        <p><i class="fas fa-phone-alt"></i> +62812 9078 012</p>
+                        <p><i class="fas fa-envelope"></i> deniel@dwidsm.com</p>
+                    </div>
+                </div>
+                
+                <div class="footer-links">
+                    <h4>Tautan Cepat</h4>
+                    <a href="#home"><i class="fas fa-chevron-right"></i> Beranda</a>
+                    <a href="#profile"><i class="fas fa-chevron-right"></i> Profil</a>
+                    <a href="#main-projects"><i class="fas fa-chevron-right"></i> Proyek Utama</a>
+                    <a href="#other-projects"><i class="fas fa-chevron-right"></i> Proyek Lainnya</a>
+                    <a href="#software-solutions"><i class="fas fa-chevron-right"></i> Software Solutions</a>
+                    <a href="#contact"><i class="fas fa-chevron-right"></i> Kontak</a>
+                </div>
+                
+                <div class="footer-links">
+                    <h4>Layanan Kami</h4>
+                    <a href="#software-solutions"><i class="fas fa-chevron-right"></i> Website Development</a>
+                    <a href="#software-solutions"><i class="fas fa-chevron-right"></i> Mobile Apps</a>
+                    <a href="#software-solutions"><i class="fas fa-chevron-right"></i> UI/UX Design</a>
+                    <a href="#software-solutions"><i class="fas fa-chevron-right"></i> Data Science</a>
+                    <a href="#main-projects"><i class="fas fa-chevron-right"></i> Data Center Solutions</a>
+                    <a href="#main-projects"><i class="fas fa-chevron-right"></i> UPS & Rectifier</a>
+                </div>
+                
+                <div class="footer-social">
+                    <h4>Ikuti Kami</h4>
+                    <div class="social-icons">
+                        <a href="#" target="_blank"><i class="fab fa-linkedin-in"></i></a>
+                        <a href="#" target="_blank"><i class="fab fa-instagram"></i></a>
+                        <a href="#" target="_blank"><i class="fab fa-facebook-f"></i></a>
+                        <a href="#" target="_blank"><i class="fab fa-twitter"></i></a>
+                        <a href="#" target="_blank"><i class="fab fa-youtube"></i></a>
+                    </div>
+                    
+                    <!-- Newsletter Signup -->
+                    <div class="newsletter" style="margin-top: 25px;">
+                        <h4>Newsletter</h4>
+                        <p style="font-size: 12px; opacity: 0.7;">Dapatkan update terbaru dari kami</p>
+                        <form id="newsletterForm" style="display: flex; margin-top: 10px;">
+                            <input type="email" placeholder="Email Anda" required style="flex: 1; padding: 8px; border: none; border-radius: 5px 0 0 5px; outline: none;">
+                            <button type="submit" style="background: #ff6b35; border: none; padding: 8px 12px; border-radius: 0 5px 5px 0; cursor: pointer; color: white;">
+                                <i class="fas fa-paper-plane"></i>
+                            </button>
+                        </form>
+                    </div>
+                </div>
             </div>
-            <div class="footer-bottom"><p>&copy; 2026 DDSM - Dwidaya Semesta Mandiri. All rights reserved.</p></div>
+            
+            <div class="footer-bottom">
+                <p>&copy; 2026 DDSM - Dwidaya Semesta Mandiri. All rights reserved.</p>
+                <div class="footer-bottom-links" style="margin-top: 10px;">
+                    <a href="#" style="color: rgba(255,255,255,0.5); text-decoration: none; margin: 0 10px;">Privacy Policy</a>
+                    <a href="#" style="color: rgba(255,255,255,0.5); text-decoration: none; margin: 0 10px;">Terms of Service</a>
+                    <a href="#" style="color: rgba(255,255,255,0.5); text-decoration: none; margin: 0 10px;">Sitemap</a>
+                </div>
+            </div>
         </div>
     </footer>
 
