@@ -37,15 +37,11 @@
             justify-content: space-between;
             align-items: center;
         }
-        .nav-brand h2 {
-            color: #1a3a6f;
-            font-size: 28px;
-            font-weight: 800;
-        }
-        .nav-brand span {
-            font-size: 12px;
-            color: #666;
-            display: block;
+        .nav-logo {
+            height: 50px;
+            width: auto;
+            max-height: 50px;
+            object-fit: contain;
         }
         .nav-menu a {
             color: #333;
@@ -55,7 +51,7 @@
             transition: color 0.3s;
         }
         .nav-menu a:hover {
-            color: #1a3a6f;
+            color: #ff6b35;
         }
         .menu-toggle {
             display: none;
@@ -69,7 +65,7 @@
             display: flex;
             align-items: center;
             text-align: center;
-            margin-top: 70px;
+            margin-top: 80px;
         }
         .hero-content h1 {
             color: white;
@@ -195,34 +191,55 @@
             left: 0;
             color: #ff6b35;
         }
-        .services {
+        /* Main Projects Section - Rectifier, UPS, Battery */
+        .main-projects {
             padding: 80px 0;
             background: #f8f9fa;
         }
-        .services-grid {
+        .main-projects-grid {
             display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
             gap: 30px;
         }
-        .service-card {
+        .main-project-card {
             background: white;
             padding: 40px 30px;
             text-align: center;
-            border-radius: 10px;
+            border-radius: 15px;
             transition: all 0.3s;
+            box-shadow: 0 5px 20px rgba(0,0,0,0.05);
         }
-        .service-card i {
-            font-size: 50px;
+        .main-project-card:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 15px 35px rgba(0,0,0,0.1);
+        }
+        .main-project-card i {
+            font-size: 55px;
             color: #ff6b35;
             margin-bottom: 20px;
+            background: rgba(255,107,53,0.1);
+            padding: 18px;
+            border-radius: 50%;
         }
-        .service-card h3 {
-            font-size: 22px;
-            margin-bottom: 15px;
+        .main-project-card h3 {
+            font-size: 24px;
             color: #1a3a6f;
+            margin-bottom: 15px;
         }
-        /* Featured Projects */
-        .featured-projects {
+        .main-project-card p {
+            color: #555;
+            margin-bottom: 20px;
+        }
+        .project-client-name {
+            color: #ff6b35;
+            font-weight: 600;
+            font-size: 14px;
+            margin-top: 10px;
+            padding-top: 15px;
+            border-top: 1px solid #e0e0e0;
+        }
+        /* Other Projects */
+        .other-projects {
             padding: 80px 0;
             background: white;
         }
@@ -248,22 +265,10 @@
             display: flex;
             align-items: center;
             justify-content: center;
-            position: relative;
         }
         .project-image i {
             font-size: 70px;
             color: rgba(255,255,255,0.3);
-        }
-        .project-image .badge {
-            position: absolute;
-            top: 15px;
-            right: 15px;
-            background: #ff6b35;
-            color: white;
-            padding: 5px 12px;
-            border-radius: 20px;
-            font-size: 12px;
-            font-weight: 600;
         }
         .project-content {
             padding: 25px;
@@ -276,13 +281,23 @@
         .project-client {
             color: #ff6b35;
             font-weight: 600;
-            margin-bottom: 15px;
+            margin-bottom: 8px;
             display: flex;
             align-items: center;
             gap: 8px;
         }
-        .project-client i {
-            font-size: 14px;
+        .project-year-location {
+            color: #666;
+            font-size: 13px;
+            margin-bottom: 15px;
+            display: flex;
+            align-items: center;
+            gap: 15px;
+            flex-wrap: wrap;
+        }
+        .project-year-location i {
+            color: #ff6b35;
+            margin-right: 5px;
         }
         .project-desc {
             color: #555;
@@ -517,12 +532,6 @@
         .social-icons a:hover {
             color: #ff6b35;
         }
-        .nav-logo {
-            height: 45px;
-            width: auto;
-            max-height: 45px;
-            object-fit: contain;
-        }
         .footer-bottom {
             text-align: center;
             padding-top: 20px;
@@ -536,16 +545,15 @@
             .nav-menu {
                 display: none;
                 position: absolute;
-                top: 70px;
+                top: 80px;
                 left: 0;
                 width: 100%;
                 background: white;
                 padding: 20px;
                 box-shadow: 0 5px 10px rgba(0,0,0,0.1);
             }
-
             .nav-logo {
-                height: 35px;
+                height: 40px;
             }
             .nav-menu.active {
                 display: flex;
@@ -576,6 +584,8 @@
     <button id="backToTop" class="back-to-top">
         <i class="fas fa-arrow-up"></i>
     </button>
+
+    <!-- NAVIGATION -->
     <nav class="navbar">
         <div class="container">
             <div class="nav-brand">
@@ -584,8 +594,8 @@
             <div class="nav-menu">
                 <a href="#home">Beranda</a>
                 <a href="#profile">Profil</a>
-                <a href="#services">Layanan</a>
-                <a href="#projects">Proyek</a>
+                <a href="#main-projects">Proyek Utama</a>
+                <a href="#other-projects">Proyek Lainnya</a>
                 <a href="#contact">Kontak</a>
             </div>
             <div class="menu-toggle">
@@ -593,6 +603,8 @@
             </div>
         </div>
     </nav>
+
+    <!-- HERO SECTION -->
     <section id="home" class="hero">
         <div class="container">
             <div class="hero-content">
@@ -602,6 +614,8 @@
             </div>
         </div>
     </section>
+
+    <!-- VALUES SECTION -->
     <section id="profile" class="values">
         <div class="container">
             <div class="section-title">
@@ -615,6 +629,8 @@
             </div>
         </div>
     </section>
+
+    <!-- VISION & MISSION -->
     <section class="vision-mission">
         <div class="container">
             <div class="vm-grid">
@@ -623,70 +639,60 @@
             </div>
         </div>
     </section>
-    <section id="services" class="services">
+
+    <!-- MAIN PROJECTS SECTION: RECTIFIER, UPS, BATTERY -->
+    <section id="main-projects" class="main-projects">
         <div class="container">
-            <div class="section-title"><h2>Layanan Unggulan</h2><div class="title-line"></div></div>
-            <div class="services-grid">
-                <div class="service-card"><i class="fas fa-broom"></i><h3>Data Center Cleaning</h3><p>Pembersihan profesional ruang server dari debu & kontaminan. Mencegah overheating & downtime.</p></div>
-                <div class="service-card"><i class="fas fa-tint"></i><h3>Water Leak Detection</h3><p>Sistem deteksi kebocoran air dengan respon darurat 2 jam, garansi 2 tahun.</p></div>
-                <div class="service-card"><i class="fas fa-snowflake"></i><h3>Cooling Infrastructure</h3><p>Pengadaan & instalasi Precision AC (PAC) untuk suhu & kelembaban optimal.</p></div>
+            <div class="section-title">
+                <h2>Proyek Utama</h2>
+                <div class="title-line"></div>
+                <p class="section-subtitle">Solusi infrastruktur daya untuk data center dan industri telekomunikasi</p>
+            </div>
+            <div class="main-projects-grid">
+                <div class="main-project-card">
+                    <i class="fas fa-bolt"></i>
+                    <h3>Rectifier</h3>
+                    <p>Pengadaan & instalasi rectifier untuk modernisasi DEFA (DC Power System). Kapasitas 600A – 1200A untuk site Telkom.</p>
+                    <div class="project-client-name"><i class="fas fa-building"></i> PT. Infrastruktur Telekomunikasi Indonesia</div>
+                </div>
+                <div class="main-project-card">
+                    <i class="fas fa-plug"></i>
+                    <h3>UPS</h3>
+                    <p>Uninterruptible Power Supply untuk server room. Memastikan listrik stabil & mencegah downtime saat pemadaman.</p>
+                    <div class="project-client-name"><i class="fas fa-building"></i> PT. Bach Multi Global</div>
+                </div>
+                <div class="main-project-card">
+                    <i class="fas fa-car-battery"></i>
+                    <h3>Battery</h3>
+                    <p>Pengadaan & pemasangan baterai VRLA / VLA / Lithium untuk modernisasi DEFA. Meningkatkan keandalan sistem daya.</p>
+                    <div class="project-client-name"><i class="fas fa-building"></i> PT. Cahaya Mutiara Mandiri (Aceh)</div>
+                </div>
             </div>
         </div>
     </section>
 
-    <!-- FEATURED PROJECTS SECTION -->
-    <section id="projects" class="featured-projects">
+    <!-- OTHER PROJECTS SECTION: COOLING SYSTEM, WATERLEAK, DLN -->
+    <section id="other-projects" class="other-projects">
         <div class="container">
             <div class="section-title">
-                <h2>Proyek Unggulan</h2>
+                <h2>Proyek Lainnya</h2>
                 <div class="title-line"></div>
-                <p class="section-subtitle">Pengalaman kami dalam menangani proyek data center untuk berbagai klien terpercaya</p>
+                <p class="section-subtitle">Berbagai proyek infrastruktur yang telah kami selesaikan untuk klien terpercaya</p>
             </div>
             <div class="projects-grid">
-                <!-- Project 1: Data Center Cleaning -->
-                <div class="project-card">
-                    <div class="project-image">
-                        <i class="fas fa-broom"></i>
-                        <span class="badge">Selesai</span>
-                    </div>
-                    <div class="project-content">
-                        <h3>Data Center Cleaning</h3>
-                        <div class="project-client"><i class="fas fa-building"></i> PT. Pos Indonesia (Persero)</div>
-                        <p class="project-desc">Preventive maintenance menyeluruh untuk data center & DRC di Jakarta dan Bandung. Pembersihan raised floor, rack server, dan ruang pendukung.</p>
-                        <div class="project-stats">
-                            <div class="stat"><i class="fas fa-database"></i> 200+ Rack Server</div>
-                            <div class="stat"><i class="fas fa-temperature-low"></i> Suhu turun 2-5°C</div>
-                            <div class="stat"><i class="fas fa-chart-line"></i> Debu 80% berkurang</div>
-                        </div>
-                    </div>
-                </div>
-                <!-- Project 2: Water Leak Detection -->
-                <div class="project-card">
-                    <div class="project-image">
-                        <i class="fas fa-tint"></i>
-                        <span class="badge">Berjalan</span>
-                    </div>
-                    <div class="project-content">
-                        <h3>Water Leak Detection System</h3>
-                        <div class="project-client"><i class="fas fa-building"></i> BDX – Sub PT. Pakar Teknologi (CGK3)</div>
-                        <p class="project-desc">Instalasi sistem pendeteksi kebocoran air di area rooftop, lantai 1 UPS room, dan sekitar AC ducting. Respon darurat 2 jam, tiba di lokasi 4 jam.</p>
-                        <div class="project-stats">
-                            <div class="stat"><i class="fas fa-clock"></i> Respon 2 Jam</div>
-                            <div class="stat"><i class="fas fa-calendar-alt"></i> Garansi 2 Tahun</div>
-                            <div class="stat"><i class="fas fa-chart-simple"></i> 8 Kuartal Free Maintenance</div>
-                        </div>
-                    </div>
-                </div>
-                <!-- Project 3: Cooling Infrastructure -->
+                <!-- Project 1: Cooling System -->
                 <div class="project-card">
                     <div class="project-image">
                         <i class="fas fa-snowflake"></i>
-                        <span class="badge">Proposal</span>
                     </div>
                     <div class="project-content">
-                        <h3>Infrastruktur Cooling</h3>
+                        <h3>Cooling System</h3>
                         <div class="project-client"><i class="fas fa-building"></i> PT. Telekomunikasi Indonesia Internasional (Telin)</div>
-                        <p class="project-desc">Pengadaan & instalasi Precision Air Conditioning (PAC) Montair kapasitas 26.9–35.3 kW, dual power source, water leak sensor, & integrasi EMS.</p>
+                        <div class="project-year-location">
+                            <span><i class="fas fa-calendar-alt"></i> 2024</span>
+                            <span><i class="fas fa-map-marker-alt"></i> CLS Pantai Mutiara, Jakarta</span>
+                        </div>
+                        <p class="project-desc">Pengadaan & instalasi Precision Air Conditioning (PAC) Montair, dual power source, water leak sensor, & integrasi EMS.</p>
                         <div class="project-stats">
                             <div class="stat"><i class="fas fa-microchip"></i> PAC 35 kW</div>
                             <div class="stat"><i class="fas fa-bolt"></i> Dual Power Source</div>
@@ -694,10 +700,51 @@
                         </div>
                     </div>
                 </div>
+                <!-- Project 2: Waterleak -->
+                <div class="project-card">
+                    <div class="project-image">
+                        <i class="fas fa-tint"></i>
+                    </div>
+                    <div class="project-content">
+                        <h3>Waterleak Detection System</h3>
+                        <div class="project-client"><i class="fas fa-building"></i> BDX – Sub PT. Pakar Teknologi</div>
+                        <div class="project-year-location">
+                            <span><i class="fas fa-calendar-alt"></i> 2024</span>
+                            <span><i class="fas fa-map-marker-alt"></i> Jakarta (CGK3)</span>
+                        </div>
+                        <p class="project-desc">Instalasi sistem pendeteksi kebocoran air di area rooftop, lantai 1 UPS room, dan sekitar AC ducting.</p>
+                        <div class="project-stats">
+                            <div class="stat"><i class="fas fa-clock"></i> Respon 2 Jam</div>
+                            <div class="stat"><i class="fas fa-calendar-alt"></i> Garansi 2 Tahun</div>
+                            <div class="stat"><i class="fas fa-chart-simple"></i> 8 Kuartal Free Maintenance</div>
+                        </div>
+                    </div>
+                </div>
+                <!-- Project 3: DLN (Data Center Network) -->
+                <div class="project-card">
+                    <div class="project-image">
+                        <i class="fas fa-server"></i>
+                    </div>
+                    <div class="project-content">
+                        <h3>DLN (Data Center Network)</h3>
+                        <div class="project-client"><i class="fas fa-building"></i> PT. Telkom Data Ekosistem</div>
+                        <div class="project-year-location">
+                            <span><i class="fas fa-calendar-alt"></i> 2023 - 2024</span>
+                            <span><i class="fas fa-map-marker-alt"></i> DC Sentul & HDC Cikarang</span>
+                        </div>
+                        <p class="project-desc">Pengadaan dedicated colocation 70 racks, cross connect DC, instalasi panel, electrical, CCTV, dan rack server.</p>
+                        <div class="project-stats">
+                            <div class="stat"><i class="fas fa-database"></i> 70 Racks</div>
+                            <div class="stat"><i class="fas fa-chart-line"></i> Cross Connect DC</div>
+                            <div class="stat"><i class="fas fa-shield-alt"></i> CCTV & Panel</div>
+                        </div>
+                    </div>
+                </div>
             </div>
         </div>
     </section>
 
+    <!-- WHY CHOOSE DDSM -->
     <section class="experience">
         <div class="container">
             <div class="section-title"><h2>Mengapa Memilih DDSM?</h2><div class="title-line"></div></div>
@@ -709,13 +756,14 @@
         </div>
     </section>
 
+    <!-- TESTIMONIALS -->
     <section class="testimonials">
         <div class="container">
             <div class="section-title"><h2 style="color:white;">Apa Kata Pelanggan?</h2><div class="title-line"></div></div>
             <div class="testimonial-slider">
                 <div class="testimonial-card active"><i class="fas fa-quote-left"></i><p>"DDSM memberikan solusi data center yang sangat profesional. Timnya responsif dan berkualitas."</p><h4>- IT Manager, Bank BUMN</h4></div>
-                <div class="testimonial-card"><i class="fas fa-quote-left"></i><p>"Pemasangan rack containment HAC/CAC sangat rapi dan sesuai standar internasional. Recommended!"</p><h4>- Data Center Lead, Perusahaan Telekomunikasi</h4></div>
-                <div class="testimonial-card"><i class="fas fa-quote-left"></i><p>"Layanan purna jual yang sangat baik. DDSM mitra terpercaya kami."</p><h4>- Facility Manager, Perusahaan E-commerce</h4></div>
+                <div class="testimonial-card"><i class="fas fa-quote-left"></i><p>"Pemasangan rectifier dan UPS sangat rapi dan sesuai standar. Recommended!"</p><h4>- Project Manager, PT. Infrastruktur Telekomunikasi Indonesia</h4></div>
+                <div class="testimonial-card"><i class="fas fa-quote-left"></i><p>"Layanan purna jual yang sangat baik. DDSM mitra terpercaya kami untuk kebutuhan daya."</p><h4>- Facility Manager, Perusahaan E-commerce</h4></div>
             </div>
             <div class="slider-controls">
                 <button class="prev-slide"><i class="fas fa-chevron-left"></i></button>
@@ -724,6 +772,7 @@
         </div>
     </section>
 
+    <!-- CONTACT -->
     <section id="contact" class="contact">
         <div class="container">
             <div class="section-title"><h2>Hubungi Kami</h2><div class="title-line"></div></div>
@@ -746,16 +795,19 @@
             </div>
         </div>
     </section>
+
+    <!-- FOOTER -->
     <footer class="footer">
         <div class="container">
             <div class="footer-content">
                 <div class="footer-logo"><h3>DDSM</h3><p>Dwidaya Semesta Mandiri</p></div>
-                <div class="footer-links"><h4>Tautan Cepat</h4><a href="#home">Beranda</a><a href="#profile">Profil</a><a href="#services">Layanan</a><a href="#projects">Proyek</a><a href="#contact">Kontak</a></div>
+                <div class="footer-links"><h4>Tautan Cepat</h4><a href="#home">Beranda</a><a href="#profile">Profil</a><a href="#main-projects">Proyek Utama</a><a href="#other-projects">Proyek Lainnya</a><a href="#contact">Kontak</a></div>
                 <div class="footer-social"><h4>Ikuti Kami</h4><div class="social-icons"><a href="#"><i class="fab fa-linkedin"></i></a><a href="#"><i class="fab fa-instagram"></i></a><a href="#"><i class="fab fa-facebook"></i></a></div></div>
             </div>
             <div class="footer-bottom"><p>&copy; 2026 DDSM - Dwidaya Semesta Mandiri. All rights reserved.</p></div>
         </div>
     </footer>
+
     <script>
         const menuToggle = document.querySelector('.menu-toggle');
         const navMenu = document.querySelector('.nav-menu');
